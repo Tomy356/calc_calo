@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorías</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sección de la calculadora de calorías -->
+    <div class="container">
+        <h1>Calculadora de Calorías</h1>
+        <form id="calorie-form">
+            <label for="gender">Género:</label>
+            <select id="gender">
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+            </select>
+            
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label for="height">Altura (cm):</label>
+            <input type="number" id="height" required>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" required>
+
+            <label for="activity-level">Nivel de Actividad:</label>
+            <select id="activity-level">
+                <option value="1.2">Sedentario</option>
+                <option value="1.375">Ligera actividad</option>
+                <option value="1.55">Actividad moderada</option>
+                <option value="1.725">Actividad intensa</option>
+                <option value="1.9">Muy intenso</option>
+            </select>
+
+            <label for="goal">Objetivo:</label>
+            <select id="goal">
+                <option value="maintain">Mantener peso</option>
+                <option value="lose">Perder peso</option>
+                <option value="gain">Ganar peso</option>
+            </select>
+
+            <button type="button" onclick="calculateCalories()">Calcular</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <!-- Nueva sección de alimentos recomendados -->
+    <div class="food-section">
+        <h2>Alimentos Recomendados</h2>
+        <div class="food-list">
+            <div class="food-item">
+                <img src="imagenes/manzana.jpg" alt="Manzana">
+                <p>Manzana - 52 kcal por 100g</p>
+            </div>
+            <div class="food-item">
+                <img src="imagenes/platano.jpg" alt="Plátano">
+                <p>Plátano - 89 kcal por 100g</p>
+            </div>
+            <div class="food-item">
+                <img src="imagenes/pollo.jpg" alt="Pechuga de pollo">
+                <p>Pechuga de pollo - 165 kcal por 100g</p>
+            </div>
+            <div class="food-item">
+                <img src="imagenes/arroz.jpg" alt="Arroz cocido">
+                <p>Arroz cocido - 130 kcal por 100g</p>
+            </div>
+            <div class="food-item">
+                <img src="imagenes/nueces.jpg" alt="Nueces">
+                <p>Nueces - 654 kcal por 100g</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

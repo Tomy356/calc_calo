@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9; /* Un gris suave para el fondo */
+    height: 100vh;
+}
+
+/* Estilos de la calculadora */
+.container {
+    background-color: #ffffff; /* Blanco para el fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    width: 100%;
+    max-width: 400px; /* Reducir el tamaño máximo */
+    margin: 0 auto; /* Centrar la calculadora */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50; /* Gris oscuro para el título */
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+form label, select, input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.1em; /* Aumentar ligeramente el tamaño de la fuente */
+}
+
+select, input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc; /* Borde suave y gris */
+    border-radius: 5px;
+}
+
+select:focus, input:focus {
+    border-color: #2980b9; /* Borde azul cuando el campo está enfocado */
+    outline: none;
+}
+
+button {
+    background-color: #2980b9; /* Azul formal para el botón */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+button:hover {
+    background-color: #1f678b; /* Azul más oscuro al hacer hover */
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #2c3e50; /* Gris oscuro */
+}
+
+/* Estilos para la sección de alimentos */
+.food-section {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.food-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.food-item {
+    width: 150px;
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #7f8c8d; /* Gris suave para los textos de los alimentos */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* La calculadora ocupa el 90% del ancho en pantallas medianas */
+    }
+
+    .food-item {
+        width: 45%; /* Ocupa el 45% del espacio en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .food-item {
+        width: 80%; /* Ocupa el 80% del espacio en pantallas más pequeñas */
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    #result {
+        font-size: 1em;
+    }
+}
